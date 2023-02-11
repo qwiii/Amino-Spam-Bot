@@ -51,6 +51,7 @@ async def send_message(client: Client, ndcId: int, threadId: str, text: str, mes
                                                        text=text,
                                                        threadId=threadId,
                                                        message_type=message_type)) for _ in range(450)])
+        print("Spamming...")
 
 
 @Start()
@@ -62,4 +63,3 @@ async def main(client: Client):
                        threadId=await choice_chat(client, ndcId),
                        text=input("Message::: "),
                        message_type=int(input("Message Type::: ")))
-    print("Spamming...")
